@@ -31,9 +31,307 @@
 
 \section{The model}
 
+
+
+
+\subsection{The formulation}
+The most general action (up to topological invariant and boundary terms) in four dimensions is given by
+\begin{equation}
+    \label{PAG_action}
+\begin{split}
+S & =
+    \int  \mathrm{d}V^{\alpha \beta \gamma \delta} \bigg[
+    B_1 \mathcal{R}_{\mu\nu}{}^{\mu}{}_{\rho}\mathcal{B}_{\alpha}{}^{\nu}{}_{\beta}\mathcal{B}_{\gamma}{}^{\rho}{}_{\delta}
+    + B_2 \mathcal{R}_{\alpha\beta}{}^{\mu}{}_{\rho} \mathcal{B}_{\gamma}{}^{\nu}{}_{\delta} \mathcal{B}_{\mu}{}^{\rho}{}_{\nu}
+    + B_3 \mathcal{R}_{\mu\nu}{}^{\mu}{}_{\alpha} \mathcal{B}_{\beta}{}^{\nu}{}_{\gamma} \mathcal{A}_\delta
+    \\
+    & \quad
+    + B_4 \mathcal{R}_{\alpha\beta}{}^{\sigma}{}_{\rho}\mathcal{B}_{\gamma}{}^{\rho}{}_{\delta}\mathcal{A}_\sigma
+    + B_5 \mathcal{R}_{\alpha \beta}{}^{\rho}{}_{\rho} \mathcal{B}_{\gamma}{}^{\sigma}{}_{\delta} \mathcal{A}_\sigma
+    + C_1 \mathcal{R}_{\mu\alpha}{}^{\mu}{}_{\nu} \nabla_\beta \mathcal{B}_{\gamma}{}^{\nu}{}_{\delta}
+    \\
+    & \quad
+    + C_2 \mathcal{R}_{\alpha\beta}{}^{\rho}{}_{\rho} \nabla_\sigma \mathcal{B}_{\gamma}{}^{\sigma}{}_{\delta}
+    + D_1 \mathcal{B}_{\nu}{}^{\mu}{}_{\lambda} \mathcal{B}_{\mu}{}^{\nu}{}_{\alpha} \nabla_\beta \mathcal{R}_{\gamma}{}^{\lambda}{}_{\delta}
+    + D_2 \mathcal{B}_{\alpha}{}^{\mu}{}_{\beta} \mathcal{B}_{\mu}{}^{\lambda}{}_{\nu} \nabla_{\lambda} \mathcal{B}_{\gamma}{}^{\nu}{}_{\delta}
+    \\
+    & \quad
+    + D_3 \mathcal{B}_{\alpha}{}^{\mu}{}_{\nu}\mathcal{B}_{\beta}{}^{\lambda}{}_{\gamma} \nabla_\lambda \mathcal{B}_{\mu}{}^{\nu}{}_{\delta}
+    + D_4 \mathcal{B}_{\alpha}{}^{\lambda}{}_{\beta}\mathcal{B}_{\gamma}{}^{\sigma}{}_{\delta}\nabla_\lambda \mathcal{A}_\sigma
+    + D_5 \mathcal{B}_{\alpha}{}^{\lambda}{}_{\beta} \mathcal{A}_\sigma \nabla_\lambda \mathcal{B}_{\gamma}{}^{\sigma}{}_{\delta}
+    \\
+    &\quad
+    + D_6 \mathcal{B}_{\alpha}{}^{\lambda}{}_{\beta}\mathcal{A}_\gamma \nabla_\lambda A_\delta
+    + D_7\mathcal{B}_{\alpha}{}^{\lambda}{}_{\beta} \mathcal{A}_\lambda \nabla_\gamma A_\delta
+    + E_1\nabla_\rho \mathcal{B}_{\alpha}{}^{\rho}{}_{\beta} \nabla_\sigma \mathcal{B}_{\gamma}{}^{\sigma}{}_{\delta}
+    \\
+    &\quad
+    + E_2 \nabla_\rho \mathcal{B}_{\alpha}{}^{\rho}{}_{\beta} \nabla_\gamma \mathcal{A}_\delta
+    + F_1 \mathcal{B}_{\alpha}{}^{\mu}{}_{\beta} \mathcal{B}_{\gamma}{}^{\sigma}{}_{\delta} \mathcal{B}_{\mu}{}^{\lambda}{}_{\rho} \mathcal{B}_{\sigma}{}^{\rho}{}_{\lambda}
+    + F_2\mathcal{B}_{\alpha}{}^{\mu}{}_{\beta} \mathcal{B}_{\gamma}{}^{\nu}{}_{\lambda} \mathcal{B}_{\delta}{}^{\lambda}{}_{\rho} \mathcal{B}_{\mu}{}^{\rho}{}_{\nu}
+    \\
+    &\quad
+    + F_3 \mathcal{B}_{\nu}{}^{\mu}{}_{\lambda} \mathcal{B}_{\mu}{}^{\nu}{}_{\alpha} \mathcal{B}_{\beta}{}^{\lambda}{}_{\gamma} \mathcal{A}_\delta
+    + F_4 \mathcal{B}_{\alpha}{}^{\mu}{}_{\beta}\mathcal{B}_{\gamma}{}^{\nu}{}_{\delta}\mathcal{A}_\mu \mathcal{A}_\nu \bigg].
+\end{split}
+\end{equation}
+
+\subsection{Cosmological ansatz}
+
+\begin{align}
+    \label{G_ansatz}
+    \ctG{t}{t}{t} & =f(t) & \ctG{i}{t}{j} & = g(t) S_{i j} \\
+    \ctG{t}{i}{j} &= h(t) \delta^{i}_{j} & \ctG{i}{j}{k} & = \ctg{i}{j}{k},
+\end{align}
+where $S_{ij}$ is the three-dimensional rank two symmetric tensor defined as follow
+\begin{equation}
+    S_{i j}=\left(\begin{array}{ccc}
+    \frac{1}{1-\kappa r^2} & 0 & 0 \\
+    0 & r^2 & 0 \\
+    0 & 0 & r^2 \sin ^2 \theta
+    \end{array}\right),
+\end{equation}
+and $\gamma$ is the symmetric connection compatible with desired symmetries written as
+\begin{align}
+    \ctg{r}{r}{r} & = \frac{\kappa r}{1 - \kappa r^2} & \ctg{\theta}{r}{\theta} & = \kappa r^3 - r &
+    \ctg{\varphi}{r}{\varphi} & = \left(\kappa r^3 - r\right)\sin^2\theta & \ctg{r}{\theta}{\theta} & = \frac{1}{r} \\
+    \ctg{\varphi}{\theta}{\varphi} & = -\cos\theta\sin\theta & \ctg{r}{\varphi}{\varphi} & = \frac{1}{r} & 
+    \ctg{\theta}{\varphi}{\varphi} & = \frac{\cos \theta}{\sin \theta}.
+\end{align}
+
+Interestingly, the affine function $f(t)$ can be set equal to zero, under a parametrization of the time coordinate, for more information
+on this type of transformation, please refer to Ref. \cite{Castillo_Felisola_2022_EPJC}. Therefore, there are only two non trivial functions
+to define completely the symmetric part of the connection.
+
+\begin{equation}
+\label{B_ansatz}
+\begin{aligned}
+    \B{\theta}{r}{\varphi} & = \psi (t) r^2\sin\theta \sqrt{1 - \kappa r^2} &
+    \B{r}{\theta}{\varphi} & =\frac{\psi (t) \sin \theta}{\sqrt{1 - \kappa r^2}} & 
+    \B{r}{\varphi}{\theta} & =\frac{\psi(t)}{ \sqrt{1-\kappa r^{2}} \sin \theta}.
+\end{aligned}
+\end{equation}
+Notice the trace-less part of the torsion tensor has only one time-dependent function to defined the tensor completely.
+\begin{equation}
+    \label{A_ansatz}
+    \A{t} = \eta(t).
+\end{equation}
+There is only one time-dependent function to define completely the vectorial part of the torsion tensor.
+
+To summarize, the complete set of our cosmological ansatz compatible with the symmetries of the cosmological principle are the following
+time dependent functions
+\begin{equation}
+    \begin{aligned}
+        \Gamma & \to \left\{g(t), h(t)\right\} & \mathcal{B} & \to \left\{\psi(t)\right\} & \mathcal{A} & \to \left\{\eta(t)\right\}.
+    \end{aligned}
+\end{equation}
+
+
 \section{Dynamical system technique}
+\label{sec: dynamical_system}
+
+\begin{dmath}
+    \label{Feq_1}
+    \left(B_3\left(\dot{g} + gh + 2\kappa\right) - 2B_4\left(\dot{g} - gh\right) + 2D_6\eta g - 2F_3\psi^2\right)\psi = 0,
+\end{dmath}
+\begin{dmath}
+    \label{Feq_2}
+    \left(B_3\eta\psi -2B_4\eta\psi + C_1\left(\dot{\psi} - 2h\psi\right)\right)g = 0,
+\end{dmath}
+\begin{dmath}
+    \label{Feq_3}
+    \left(B_3 + 2B_4\right)\eta g\psi + 2C_1\left(\kappa\psi + 4gh\psi - g\dot{\psi} - \psi\dot{g}\right) + 2\psi^3\left(2D_2 - D_1 - D_3\right) = 0,
+\end{dmath}
+\begin{dmath}
+    \label{Feq_4}
+    B_3\left(\eta\left(h\psi - \dot{\psi}\right) -\psi\dot{\eta}\right) - 2B_4\left(\eta\left(-h\psi - \dot{\psi}\right) -\psi\dot{\eta}\right) 
+    + C_1\left(4h^2\psi + 2\psi\dot{h} -\ddot{\psi}\right) + D_6\eta^2\psi = 0,
+\end{dmath}
+\begin{dmath}
+    \label{Feq_5}
+    B_3\left(\dot{g} + gh + 2\kappa\right)\eta - 2B_4\left(\dot{g} - gh\right)\eta + C_1\left(2\kappa h + 4gh^2 + 2g\dot{h} - \ddot{g}\right) +
+    6h\psi^2\left(2D_2 - D_1 - D_3\right) + D_6 \eta^2 g - 6F_3\eta\psi^2 = 0
+\end{dmath}
+
+From this, we solve eq.\eqref{Feq_B1_2} to find an expression for $\eta(t)$
+\begin{equation}
+    \label{B1_eta}
+    \eta(t) = \left(\frac{2h\psi - \dot{\psi}}{\psi}\right)\left(\frac{C_1}{B_3 - 2B_4}\right),
+\end{equation}
+replacing the above expression for $\eta(t)$ into eq. \eqref{Feq_B1_4}, leads to two sub-branches for the $h(t)$ function
+\begin{align}
+    \label{B1_h}
+    h(t) & = \frac{\dot{\psi}}{2\psi} & h(t) & = \frac{\dot{\psi}}{\psi}\left(\frac{C_1 D_6}{3B_3^2 - 8B_3B_4 + B_4^2 + 2C_1D_6}\right)
+\end{align}
+using the simplest form of $h(t)$ function, then eq. \eqref{Feq_B1_3} leads to
+\begin{equation}
+    -2\left(D_1 - 2D_2 + D_3\right)\psi^3 + 2C_1\left(\psi\left(\kappa - \dot{g}\right) + g\dot{\psi}\right) = 0,
+\end{equation}
+which is a first order differential equation which can be solve for $g(t)$ in terms of the $\psi$ function
+\begin{equation}
+    \label{B1_g}
+    g(t) = \psi(t) \left(g_0 + \int_1^t \left(\frac{\kappa}{\psi(\tau)} - \psi(\tau) \left(\frac{D_1 - 2D_2 + D_3}{C_1}\right)\right) \mathrm{d}\tau\right)
+\end{equation}
+the above solution also solves eq. \eqref{Feq_B1_5}, where $g_0$ is an integration constant. Then, eq. \eqref{Feq_B1_1} becomes 
+an integro-differential equation of first order
+\begin{dmath}
+    \dot{\psi}\left(g_0 + \int_1^t \left(\frac{\kappa}{\psi(\tau)} - \psi(\tau) \left(\frac{D_1 - 2D_2 + D_3}{C_1}\right)\right) \mathrm{d}\tau\right)\left(\frac{3B_3 - 2B_4}{2}\right) -
+    \psi^2 \frac{\left(B_3 - 2B_4\right)\left(D_1 - 2D_2 + D_3\right) + 2C_1 F_3}{C_1} + \kappa \left(3B_3 - 2B_4\right) = 0.
+\end{dmath}
+The above equation can be solved for the special case $\kappa = 0$, with the variable change $\psi (t) = \dot{\phi}(t)$, then
+\begin{dmath}
+    \ddot{\phi}\left(g_0  - \phi\alpha\right)\beta - \dot{\phi}^2 \gamma  = 0,
+\end{dmath}
+where
+\begin{align}
+    \alpha & = \left(\frac{D_1 - 2D_2 + D_3}{C_1}\right) & \beta & = \left(\frac{3B_3 - 2B_4}{2}\right) \\
+    \gamma & = \frac{\left(B_3 - 2B_4\right)\left(D_1 - 2D_2 + D_3\right) + 2C_1 F_3}{C_1},
+\end{align}
+whose solution
+\begin{equation}
+    \phi(t) = \frac{g_0}{\alpha} + \frac{\left(\phi_0 \left(\alpha\beta + \gamma\right) \left(t +  \phi_1\right)\right)^{\frac{\alpha\beta}{\alpha\beta + \gamma}}}{\alpha\beta},
+\end{equation}
+where $\phi_0$ and $\phi_1$ are integration constant. From this
+\begin{equation}
+    \psi(t) = \phi_0 \left(\phi_0 \left(\alpha\beta + \gamma\right)\left(t + \phi_1\right)\right)^{-\frac{\gamma}{\alpha\beta + \gamma}}.
+\end{equation}
+From the above expression and using the relations in eqs. \eqref{B1_eta}, \eqref{B1_h} and \eqref{B1_g} it is straightforward to find the rest of the
+affine functions
+\begin{align}
+    \eta(t) & = 0,\\
+    h(t) & = - \frac{\gamma}{2\left(\alpha\beta + \gamma\right)\left(t + \phi_1\right)},\\
+    g(t) & = \phi_0 \left(\left(\alpha\beta + \gamma\right)\phi_0 \left(t + \phi_1\right)\right)^{-\frac{\gamma}{\alpha\beta + \gamma}}
+    \left(g_0 - \frac{\left(\left(\alpha\beta + \gamma\right)\phi_0\left(t + \phi_1\right)\right)^{\frac{\alpha\beta}{\alpha\beta + \gamma}}}{\beta}\right)
+\end{align}
 
 \section{Final remarks}
+\label{sec: final_remarks}
+
+\appendix
+
+\section{Appendix I: Field equation}
+\label{sec:Appendix_I}
+
+Using Kijowkski's formalism for an arbitrary tensor-field $\Phi^{\alpha_1\alpha_2 ...}{}_{\beta_1\beta_2}$, its field equations are
+\begin{equation}
+    \nabla_\mu \Pi_{\Phi}{}^{\mu\beta_1\beta_2 ...}{}_{\alpha_1\alpha_2 ...}  = \frac{\partial^* \mathcal{L}}{\partial \Phi^{\alpha_1\alpha_2 ...}{}_{\beta_1\beta_2}},
+\end{equation}
+where the asterisk on the right-hand side denotes the partial derivatives with respect to the connection that is not
+contained in the Riemann curvature tensor, additionally, the canonically conjugated momenta is defined by
+\begin{equation}
+    \nabla_\mu \Pi_{\Phi}{}^{\mu\beta_1\beta_2 ...}{}_{\alpha_1\alpha_2 ...}
+    = \frac{\partial \mathcal{L}}{\partial \left(\partial_\mu \Phi^{\alpha_1\alpha_2 ...}{}_{\beta_1\beta_2}\right)} 
+    = \frac{\partial \mathcal{L}}{\partial \Phi^{\alpha_1\alpha_2 ...}{}_{\mu\beta_1\beta_2}}.
+\end{equation}
+
+
+\subsection{Vectorial torsion field equation}
+
+The field equations of the vectorial part of the torsion tensor are
+\begin{equation}
+    \nabla_\mu \Pi_{\mathcal{A}}{}^{\mu\nu}  = \frac{\partial^* \mathcal{L}}{\partial \A{\nu}},
+\end{equation}
+where the asterisk on the right-hand side denotes the partial derivatives with respect to the connection that is not
+contained in the Riemann curvature tensor, additionally, the canonically conjugated momenta is defined by
+\begin{equation}
+    \nabla_\mu \Pi_{\mathcal{A}}{}^{\mu\nu}  
+    = \frac{\partial \mathcal{L}}{\partial \left(\partial_\mu \A{\nu}\right)} 
+    = \frac{\partial \mathcal{L}}{\partial \A{\mu\nu}}.
+\end{equation}
+The field equations are:
+\begin{align*}
+    B_3: & -\Rie{\sigma\tau}{\sigma}{\alpha}\B{\beta}{\tau}{\gamma}\deV{\alpha\beta\gamma\nu} \\
+    B_4: & -\Rie{\alpha\beta}{\nu}{\sigma}\B{\gamma}{\sigma}{\tau}\deV{\alpha\beta\gamma\tau} \\
+    B_5: & -\Rie{\alpha\beta}{\rho}{\rho}\B{\gamma}{\nu}{\tau}\deV{\alpha\beta\gamma\tau} \\
+    D_4: & \nabla_\mu\left(\B{\alpha}{\mu}{\beta}\B{\gamma}{\nu}{\tau}\deV{\alpha\beta\gamma\tau}\right) \\
+    D_5: & -\B{\alpha}{\sigma}{\beta}\nabla_\sigma\B{\gamma}{\nu}{\tau}\deV{\alpha\beta\gamma\tau} \\
+    D_6: & \nabla_\mu\left(\B{\alpha}{\mu}{\beta}\A{\gamma}\deV{\alpha\beta\gamma\nu}\right) + \B{\alpha}{\mu}{\beta}\nabla_\mu\A{\gamma}\deV{\alpha\beta\gamma\nu} \\
+    D_7: & \nabla_\mu\left(\B{\alpha}{\sigma}{\beta}\A{\sigma}\deV{\alpha\beta\mu\nu}\right) - \B{\alpha}{\nu}{\beta}\mathcal{F}_{\gamma\tau}\deV{\alpha\beta\gamma\tau} \\
+    E_2: & \nabla_\mu \left(\nabla_\sigma\B{\alpha}{\sigma}{\beta}\right)\deV{\alpha\beta\mu\nu}\\
+    F_3: & -\B{\sigma}{\tau}{\lambda}\B{\tau}{\sigma}{\alpha}\B{\beta}{\lambda}{\gamma}\deV{\alpha\beta\gamma\nu}\\
+    F_4: & -2\B{\alpha}{\sigma}{\beta}\B{\gamma}{\nu}{\tau}\A{\sigma}\deV{\alpha\beta\gamma\tau} 
+\end{align*}
+
+\subsection{Trace-less torsion field equation}
+
+The field equations of the trace-less part of the torsion tensor are
+\begin{equation}
+    \nabla_\mu \Pi_{\mathcal{B}}{}^{\mu\nu}{}_{\lambda}{}^{\rho}  = \frac{\partial^* \mathcal{L}}{\partial \B{\nu}{\lambda}{\rho}},
+\end{equation}
+where the asterisk on the right-hand side denotes the partial derivatives with respect to the connection that is not
+contained in the Riemann curvature tensor, additionally, the canonically conjugated momenta is defined by
+\begin{equation}
+    \nabla_\mu \Pi_{\mathcal{B}}{}^{\mu\nu}{}_{\lambda}{}^{\rho}  
+    = \frac{\partial \mathcal{B}}{\partial \left(\partial_\mu \B{\nu}{\lambda}{\rho}\right)} 
+    = \frac{\partial \mathcal{L}}{\partial  \B{\mu\nu}{\lambda}{\rho}}.
+\end{equation}
+The field equations are:
+\begin{align*}
+    B_1: & -4\Rie{\mu\sigma}{\mu}{\lambda}\B{\gamma}{\sigma}{\delta}\deV{\nu\rho\gamma\delta} - \frac{4}{3}\Rie{\mu\tau}{\mu}{\sigma}\B{\gamma}{\sigma}{\delta}\delta^{[\nu}_{\lambda}\deV{\rho]\tau\gamma\delta} - \frac{4}{3}\Rie{\mu\sigma}{\mu}{\tau}\B{\gamma}{\sigma}{\delta}\delta^{[\nu}_{\lambda}\deV{\rho]\tau\gamma\delta}\\
+    B_2: & -2\Rie{\alpha\beta}{\mu}{\sigma}\B{\mu}{\sigma}{\lambda}\deV{\nu\rho\alpha\beta} - 2\Rie{\alpha\beta}{[\nu}{\lambda}\B{\gamma}{\rho]}{\delta}\deV{\alpha\beta\gamma\delta} - \frac{4}{3}\Rie{\alpha\beta}{\mu}{\sigma}\B{\mu}{\sigma}{\tau}\delta^{[\nu}_\lambda\deV{\rho]\tau\alpha\beta}\\
+        & -\frac{2}{3}\Rie{\alpha\beta}{\tau}{\tau}\B{\gamma}{[\nu}{\delta}\delta^{\rho]}_\lambda\deV{\alpha\beta\gamma\delta} + \frac{2}{3}\Rie{\alpha\beta}{[\nu}{\tau}\delta^{\rho]}_{\lambda}\B{\gamma}{\tau}{\delta}\deV{\alpha\beta\gamma\delta}\\
+    B_3: & -\frac{2}{3}\Rie{\mu\lambda}{\mu}{\alpha}\A{\beta}\deV{\nu\rho\alpha\beta} - \frac{4}{3}\Rie{\mu\tau}{\mu}{\alpha}\A{\beta}\delta^{[\nu}_{\lambda}\deV{\rho]\tau\alpha\beta}\\
+    B_4: & -2\Rie{\alpha\beta}{\sigma}{\lambda} \A{\sigma}\deV{\nu\rho\alpha\beta} - \frac{4}{3}\Rie{\alpha\beta}{\sigma}{\tau}\A{\sigma}\delta^{[\nu}_{\lambda}\deV{\rho]\tau\alpha\beta}\\
+    B_5: & -2\Rie{\alpha\beta}{\tau}{\tau} \A{\lambda}\deV{\nu\rho\alpha\beta} - \frac{4}{3}\Rie{\alpha\beta}{\tau}{\tau}\A{\delta}\delta^{[\nu}_{\lambda}\deV{\rho]\delta\alpha\beta}\\
+    C_1: & \nabla_\mu \left(-2 \Rie{\sigma\alpha}{\sigma}{\lambda} \deV{\mu\nu\rho\alpha} + \frac{4}{3}\Rie{\sigma\alpha}{\sigma}{\tau}\delta^{[\nu}_{\lambda}\deV{\rho]\mu\tau\alpha}\right) \\
+    C_2: & \nabla_\mu \left(2\Rie{\alpha\beta}{\sigma}{\sigma}\delta^{\mu}_{\lambda}\deV{\nu\rho\alpha\beta} + \frac{4}{3}\Rie{\alpha\beta}{\sigma}{\sigma}\delta^{[\nu}_{\lambda}\deV{\rho]\mu\alpha\beta}\right) \\
+    D_1: & \nabla_{\mu}\left( -2 \B{\sigma}{\theta}{\lambda} \B{\theta}{\sigma}{\alpha}\deV{\mu\nu\rho\alpha} \right) - 2\B{\lambda}{[\nu}{\alpha} \nabla_{\beta} \B{\gamma}{\rho]}{\delta} \deV{\alpha\beta\gamma\delta} - 2 \B{\lambda}{[\nu\lvert}{\sigma} \nabla_{\beta} \B{\gamma}{\sigma}{\delta} \deV{\lvert\rho]\beta\gamma\delta} \\
+        & -\frac{2}{3} \delta^{[\nu}_{\lambda} \B{\tau}{\rho]}{\alpha} \nabla_{\beta} \B{\gamma}{\tau}{\delta} \deV{\alpha\beta\gamma\delta} + \frac{2}{3}\B{\tau}{[\nu}{\sigma}\delta^{\rho]}_{\lambda} \nabla_{\beta} \B{\gamma}{\sigma}{\delta} \deV{\tau\beta\gamma\delta}\\
+    D_2: & \nabla_{\mu} \left( 2\B{\alpha}{\sigma}{\beta} \B{\sigma}{\mu}{\lambda} \deV{\nu\rho\alpha\beta} +\frac{4}{3} \B{\alpha}{\sigma}{\beta} \B{\sigma}{\mu}{\tau} \delta^{[\nu}_{\lambda} \deV{\rho]\tau\alpha\beta} \right) - 2\B{\lambda}{\mu}{\sigma}\nabla_{\mu}\B{\alpha}{\sigma}{\beta} \deV{\nu\rho\alpha\beta} - 2\B{\alpha}{[\nu}{\beta} \nabla_{\lambda} \B{\gamma}{\rho]}{\delta} \deV{\alpha\beta\gamma\delta}\\
+        & - \frac{4}{3} \B{\tau}{\mu}{\sigma} \nabla_{\mu} \B{\alpha}{\sigma}{\beta} \delta^{[\nu}_{\lambda} \deV{\rho]\tau\alpha\beta} - \frac{2}{3}\B{\alpha}{\tau}{\beta} \nabla_{\tau} \B{\gamma}{[\nu}{\delta} \delta^{\rho]}_{\lambda} \deV{\alpha\beta\gamma\delta} + \frac{2}{3} \B{\alpha}{[\nu}{\beta} \delta^{\rho]}_{\lambda} \nabla_{\tau} \B{\gamma}{\tau}{\delta}\deV{\alpha\beta\gamma\delta}\\
+    D_3: &  \nabla_{\mu} \left( -2 \B{\beta}{\mu}{\gamma} \B{\alpha}{[\nu}{\lambda} \deV{\rho]\alpha\beta\gamma} -\frac{2}{3} \B{\beta}{\mu}{\gamma} \B{\alpha}{[\nu}{\tau} \delta^{\rho]}_{\lambda}\deV{\alpha\beta\gamma\tau} \right) - 2\B{\beta}{\mu}{\gamma}\nabla_{\mu}\B{\lambda}{[\rho}{\delta}\deV{\nu]\beta\gamma\delta} \\
+        &  -2 \B{\gamma}{\mu}{\sigma} \nabla_{\lambda} \B{\mu}{\sigma}{\delta}\deV{\nu\rho\gamma\delta} - \frac{2}{3}\B{\beta}{\mu}{\gamma} \nabla_{\mu} \B{\tau}{[\nu}{\delta} \delta^{\rho]}_{\lambda} \deV{\tau\beta\gamma\delta} - \frac{4}{3} \B{\gamma}{\mu}{\sigma} \nabla_{\tau} \B{\mu}{\sigma}{\delta} \delta^{[\nu}_{\lambda} \deV{\rho]\tau\gamma\delta}\\
+    D_4: & -4\B{\alpha}{\sigma}{\beta} \nabla_{(\lambda} \A{\sigma)} \deV{\nu\rho\alpha\beta} - \frac{4}{3} \B{\alpha}{\sigma}{\beta}\nabla_{\tau}\A{\sigma} \delta^{[\nu}_{\lambda} \deV{\rho]\tau\alpha\beta} - \frac{4}{3}\B{\alpha}{\sigma}{\beta} \nabla_{\sigma}\A{\tau} \delta^{[\nu}_{\lambda}\deV{\rho]\tau\alpha\beta}\\
+    D_5: & \nabla_{\mu} \left( 2\B{\alpha}{\mu}{\beta} \A{\lambda} \deV{\nu\rho\alpha\beta} + \frac{4}{3}\B{\alpha}{\mu}{\beta} \A{\tau} \delta^{[\nu}_{\lambda} \deV{\rho]\tau\alpha\beta} \right) - 2 \nabla_{\lambda} \B{\alpha}{\sigma}{\beta}\A{\sigma}\deV{\nu\rho\alpha\beta} - \frac{4}{3}\nabla_{\tau} \B{\alpha}{\sigma}{\beta} \A{\sigma} \delta^{[\nu}_{\lambda}\deV{\rho]\tau\alpha\beta}\\
+    D_6: & -2\A{\gamma}\nabla_\lambda \A{\delta}\deV{\nu\rho\gamma\delta} - \frac{4}{3}\A{\gamma}\nabla_\tau\A{\delta}\delta^{[\nu}_{\lambda}\deV{\rho]\tau\gamma\delta} \\
+    D_7: & -\A{\lambda}\mathcal{F}_{\gamma\delta}\deV{\nu\rho\gamma\delta} - \frac{4}{3}\A{\tau}\mathcal{F}_{\gamma\delta} \delta^{[\nu}_{\lambda}\deV{\rho]\tau\gamma\delta}\\
+    E_1: & \nabla_\mu \left( 4\delta^\mu_\lambda \nabla_\sigma \B{\alpha}{\sigma}{\beta}\deV{\nu\rho\alpha\beta} + \frac{8}{3}\nabla_\sigma \B{\alpha}{\sigma}{\beta}\delta^{[\nu}_\rho \deV{\rho]\mu\alpha\beta}\right) \\
+    E_2: & \nabla_\mu \left(2\delta^\mu_\lambda \mathcal{F}_{\alpha\beta}\deV{\nu\rho\alpha\beta} + \frac{4}{3}\mathcal{F}_{\alpha\beta}\delta^{[\nu}_\lambda\deV{\rho]\mu\alpha\beta}\right)\\
+    F_1: & -4\B{\alpha}{\mu}{\beta}\B{\mu}{\sigma}{\tau}\B{\lambda}{\tau}{\sigma}\deV{\nu\rho\alpha\beta} -4\B{\alpha}{\mu}{\beta}\B{\mu}{[\nu}{\delta}\B{\mu}{\rho]}{\lambda}\deV{\alpha\beta\gamma\delta}  -\frac{8}{3}\B{\alpha}{\mu}{\beta}\B{\mu}{\sigma}{\tau}\B{k}{\tau}{\sigma}\delta^{[\nu}_\lambda\deV{\rho]k\alpha\beta} \\
+    F_2: & -2\B{\alpha}{\mu}{\sigma}\B{\beta}{\sigma}{\tau}\B{\lambda}{\tau}{\mu}\deV{\nu\rho\alpha\beta} + 2\B{\alpha}{\mu}{\beta}\B{\mu}{\sigma}{\lambda}\B{\gamma}{[\nu}{\sigma}\deV{\rho]\alpha\beta\gamma} - 2\B{\alpha}{\mu}{\beta}\B{\gamma}{\sigma}{\lambda}\B{\mu}{[\nu}{\sigma}\deV{\rho]\alpha\beta\gamma} \\
+        & -2\B{\alpha}{[\nu}{\beta}\B{\gamma}{\rho]}{\sigma}\B{\delta}{\sigma}{\lambda}\deV{\alpha\beta\gamma\delta} -\frac{4}{3}\B{\alpha}{\mu}{\sigma}\B{\beta}{\sigma}{\tau}\B{k}{\tau}{\mu}\delta^{[\nu}_{\lambda}\deV{\rho]k\alpha\beta} - \frac{2}{3}\B{\alpha}{\mu}{\beta}\B{\mu}{\sigma}{\tau}\B{\gamma}{[\nu}{\sigma}\delta^{\rho]}_\lambda\deV{\alpha\beta\tau\gamma} \\
+        & -\frac{2}{3}\B{\alpha}{\tau}{\beta}\B{\delta}{\sigma}{\tau}\B{\gamma}{[\nu}{\sigma}\delta^{\rho]}_\lambda \deV{\alpha\beta\gamma\delta}\\
+    F_3: & -2\B{\lambda}{[\nu}{\alpha}\B{\beta}{\rho]}{\gamma}\A{\delta}\deV{\alpha\beta\gamma\delta} -2\B{\alpha}{\sigma}{\beta}\A{\gamma}\B{\lambda}{[\nu}{\sigma}\deV{\rho]\alpha\beta\gamma} + \frac{2}{3}\B{\beta}{\tau}{\gamma}\A{\delta}\B{\tau}{[\nu}{\alpha}\delta^{\rho]}_{\lambda}\deV{\alpha\beta\gamma\delta} \\
+        & + \frac{2}{3}\B{\beta}{\tau}{\gamma}\A{\delta}\B{\tau}{[\nu}{\alpha}\delta^{\rho]}_{\lambda}\deV{\alpha\beta\gamma\delta} + \frac{2}{3}\B{\alpha}{\sigma}{\beta}\A{\gamma}\B{\tau}{[\nu}{\sigma}\delta^{\rho]}_{\lambda}\deV{\tau\alpha\beta\gamma}\\
+    F_4: & -4\B{\alpha}{\mu}{\beta}\A{\mu}\A{\lambda}\deV{\nu\rho\alpha\beta} - \frac{8}{3}\B{\alpha}{\mu}{\beta}\A{\mu}\A{\tau}\delta^{[\nu}_{\lambda}\deV{\rho]\tau\alpha\beta} 
+\end{align*}
+
+
+
+\subsection{Symmetric connection field equation}
+
+The field equations of the symmetric part of the connection are
+\begin{equation}
+    \nabla_\mu \Pi_{\Gamma}{}^{\mu\nu}{}_{\lambda}{}^{\rho}  = \frac{\partial^* \mathcal{L}}{\partial \Gamma_{\nu}{}^{\lambda}{}_{\rho}},
+\end{equation}
+where the asterisk on the right-hand side denotes the partial derivatives with respect to the connection that is not
+contained in the Riemann curvature tensor, additionally, the canonically conjugated momenta is defined by
+\begin{equation}
+    \nabla_\mu \Pi_{\Gamma}{}^{\mu\nu}{}_{\lambda}{}^{\rho}  
+    = \frac{\partial \mathcal{L}}{\partial \left(\partial_\mu \Gamma_{\nu}{}^{\lambda}{}_{\rho}\right)} 
+    = \frac{\partial \mathcal{L}}{\partial  \Gamma_{\mu\nu}{}^{\lambda}{}_{\rho}}.
+\end{equation}
+The field equations are:
+\begin{align*}
+    B_1: & \nabla_\mu \left(\Big[ 2\delta^{[\mu}_\lambda \B{\alpha}{\nu]}{\beta}\B{\gamma}{\rho}{\delta} + 2 \delta^{[\mu}_\lambda \B{\alpha}{\rho]}{\beta} \B{\gamma}{\nu}{\delta} \Big]\deV{\alpha\beta\gamma\delta}\right)\\
+    B_2: & \nabla_\mu \left(4 \B{\gamma}{\sigma}{\delta} \B{\sigma}{(\rho}{\lambda} \deV{\nu)\mu\gamma\delta}\right) \\
+    B_3: & \nabla_\mu \left(2 \delta^{[\mu}_\lambda \B{\beta}{\nu]}{\gamma} \A{\delta} \deV{\rho\beta\gamma\delta} + 2 \delta^{[\mu}_\lambda \B{\beta}{\rho]}{\gamma} \A{\delta}\deV{\nu\beta\gamma\delta}\right) \\
+    B_4: & \nabla_\mu \left(-4 \B{\gamma}{(\rho}{\delta} \A{\lambda} \deV{\nu)\mu\gamma\delta}\right) \\
+    B_5: & \nabla_\mu \left(-4 \B{\gamma}{\sigma}{\delta} \A{\sigma} \delta^{(\rho}_\lambda\deV{\nu)\mu\gamma\delta}\right)\\
+    C_1: & \nabla_\mu \left(2 \nabla_\beta \B{\gamma}{\rho}{\delta} \delta^{[\mu}_\lambda \deV{\nu]\beta\gamma\delta} + 2 \nabla_\beta \B{\gamma}{\nu}{\delta} \delta^{[\mu}_\lambda \deV{\rho]\beta\gamma\delta}\right) + 2 \Rie{\mu\alpha}{\mu}{\lambda} \B{\gamma}{(\rho}{\delta} \deV{\nu)\alpha\gamma\delta} \\ 
+    C_2: & \nabla_\mu \left(-4 \nabla_\sigma \B{\gamma}{\sigma}{\delta} \delta^{(\rho}_\lambda \deV{\nu)\mu\gamma\delta}\right) + 2 \Rie{\alpha\beta}{\sigma}{\sigma} \Big[ 2 \B{\lambda}{(\nu}{\delta} \deV{\rho)\alpha\beta\delta} - \delta^{(\nu}_\lambda \B{\gamma}{\rho)}{\delta} \deV{\alpha\beta\gamma\delta}\Big]\\
+    D_1: & 2 \B{\tau}{\sigma}{\lambda} \B{\sigma}{\tau}{\alpha} \B{\gamma}{(\rho}{\delta}\deV{\nu)\alpha\gamma\delta} \\
+    D_2: & 2 \B{\alpha}{\sigma}{\beta} \B{\sigma}{(\nu\vert}{\tau} \Big[ 2 \B{\lambda}{\tau}{\delta}\deV{\vert\rho)\alpha\beta\delta} - \delta^{\tau}_\lambda \B{\gamma}{\vert\rho)}{\delta}\deV{\alpha\beta\gamma\delta} \Big] \\
+    D_3: & 2 \B{\alpha}{\sigma}{\tau} \B{\beta}{(\nu}{\gamma} \Big[\delta^{\rho)}_\sigma \B{\lambda}{\tau}{\delta} + \delta^{\rho)}_\delta \B{\sigma}{\tau}{\lambda} - \delta^\tau_\lambda \B{\sigma}{|\rho)}{\delta} \Big] \deV{\alpha\beta\gamma\delta} \\
+    D_4: & 2\B{\alpha}{\nu}{\beta} \B{\gamma}{\rho}{\delta} \A{\lambda} \deV{\alpha\beta\gamma\delta} \\
+    D_5: & 2 \B{\alpha}{(\nu\vert}{\beta} \A{\sigma} \Big[ 2 \B{\lambda}{\sigma}{\delta} \deV{\vert\rho)\alpha\beta\delta} - \delta^\sigma_\lambda \B{\gamma}{\vert\rho)}{\delta} \deV{\alpha\beta\gamma\delta} \Big] \\
+    D_6: & -2 \B{\alpha}{(\nu}{\beta} \A{\gamma} \A{\lambda} \deV{\rho)\alpha\beta\gamma} \\
+    E_1: & 4 \nabla_\sigma \B{\alpha}{\sigma}{\beta} \Big[ 2 \B{\lambda}{(\rho}{\delta} \deV{\nu)\alpha\beta\delta} - \delta^{(\nu}_\lambda \B{\gamma}{\rho)}{\delta} \deV{\alpha\beta\gamma\delta} \Big] \\
+    E_2: & 2 \mathcal{F}_{\alpha\beta} \Big[ 2 \B{\lambda}{(\rho}{\delta} \deV{\nu)\alpha\beta\delta} - \delta^{(\nu}_\lambda \B{\gamma}{\rho)}{\delta} \deV{\alpha\beta\gamma\delta} \Big] 
+\end{align*}
+
+\bibliographystyle{unsrt}
+\bibliography{References}
 
 \end{document}
 
